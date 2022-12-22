@@ -21,6 +21,7 @@ const WeatherReducer = (state=initialState, action) => {
                     break
                 }
             }
+            localStorage.setItem('recent-searches', JSON.stringify(clonedRecent))
             return { ...state, weatherDetails: payload, error: false, loading: false, recentSearches: clonedRecent }
         case WEATHER_ERROR: return { ...state, weatherDetails: {}, hasError: true, error: payload, loading: false }
         default: return state

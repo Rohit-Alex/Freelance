@@ -11,9 +11,12 @@ const WeatherInput = ({ setSearchVal }) => {
             bordered
             value={inputVal}
             suffix={<SearchOutlined />}
-            style={{ width: "200px" }}
+            style={{ width: "400px", marginTop: '20px' }}
             onChange={(e) => setInputVal(e.target.value)}
-            onPressEnter={() => setSearchVal(inputVal)}
+            onPressEnter={() => {
+                setInputVal('')
+                setSearchVal(inputVal)
+            }}
         />
     );
 };

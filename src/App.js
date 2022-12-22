@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import './App.css';
+import './App.scss';
 import WeatherInput from './Components/WeatherInput';
 import WeatherBody from './Components/WeatherBody';
 import { getWeather } from './Redux/Actions';
@@ -16,10 +16,11 @@ function App() {
 
   return (
     <div className="App">
-      <h2>Weather App</h2>
       <WeatherInput setSearchVal={setSearchVal}/>
-      {searchVal && <WeatherBody />}
-      <RecentSearches />
+        {searchVal && <WeatherBody />}
+      <div className="ext-container">
+      </div>
+        {searchVal && <RecentSearches />}
     </div>
   );
 }

@@ -1,0 +1,57 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@mixin flexStyle {
+  display: flex;
+  gap: 20px;
+}
+
+.App {
+  display: grid;
+  place-items: center;
+  .ant-card {
+    background: #111e25;
+    color: white;
+    min-width: 200px;
+    min-height: 70px;
+    .ant-card-cover {
+      width: 250px;
+    }
+  }
+
+    .weather-body {
+      margin-top: 20px;
+      &-top-ctn {
+      @include flexStyle
+      }
+      &-top-ctn > {
+        .ant-card {
+          width: 300px;
+        }
+      }
+      .top-bottom-separator {
+        @include flexStyle;
+        flex-direction: column;
+        justify-content: space-between;
+        .top-cards, .bottom-cards {
+        @include flexStyle;
+        justify-content: space-between;
+        }
+        .bottom-cards > .ant-card {
+          width: 250px;
+        }
+      }
+    }
+    .recent-searches {
+      margin-top: 20px;
+    }
+  .recent-searches-table {
+    width: 73%;
+    .ant-table-tbody {
+      background: #111e25;
+      color: white;
+    }
+  }
+}
