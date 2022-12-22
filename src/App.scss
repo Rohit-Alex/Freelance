@@ -48,10 +48,14 @@
       margin-top: 20px;
     }
   .recent-searches-table {
-    width: 73%;
+    width: 50%;
     .ant-table-tbody {
       background: #111e25;
       color: white;
+      tr:hover{
+        // background: blue;
+        color: black;
+      }
     }
   }
 }

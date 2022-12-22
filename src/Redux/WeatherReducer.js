@@ -5,7 +5,7 @@ const initialState = {
     hasError: false,
     error: null,
     loading: false,
-    recentSearches: {}
+    recentSearches: JSON.parse(localStorage.getItem('recent-searches') ?? "{}")
 }
 
 const WeatherReducer = (state=initialState, action) => {

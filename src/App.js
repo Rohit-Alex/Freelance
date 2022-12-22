@@ -10,17 +10,17 @@ function App() {
   const [searchVal, setSearchVal] = useState('')
   const dispatch = useDispatch()
 
-  useEffect(()=>{
+  useEffect(() => {
     if (searchVal.trim()) dispatch(getWeather(searchVal))
   }, [searchVal])
 
   return (
     <div className="App">
-      <WeatherInput setSearchVal={setSearchVal}/>
-        {searchVal && <WeatherBody />}
+      <WeatherInput setSearchVal={setSearchVal} />
+      {searchVal && <WeatherBody />}
       <div className="ext-container">
       </div>
-        {searchVal && <RecentSearches />}
+      <RecentSearches />
     </div>
   );
 }
