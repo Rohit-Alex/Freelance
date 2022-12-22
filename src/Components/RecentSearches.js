@@ -8,7 +8,7 @@ const RecentSearches = () => {
             const {main: {temp} = {}} = value
             return <div>
                 <span>{key}</span>&nbsp;
-                <span>{(temp - 273.15).toFixed(2)}</span>
+                <span>{(temp - 273.15).toFixed(2)}&#8451;</span>
             </div>
         })}
     </>

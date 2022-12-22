@@ -18,13 +18,14 @@ const WeatherBody = () => {
     return <div>
         <Card title='Weather conditions'>
             <div>{description}</div>
+            <img alt='' src={`https://openweathermap.org/img/wn/${icon}@2x.png`}/>
         </Card>
         <Card title='Sunrise & Sunset'>
             <div>Sunrise {formatAMPM(new Date(sunrise * 1000))}</div>
             <div>Sunset {formatAMPM(new Date(sunset * 1000))}</div>
         </Card>
         <Card title='Temperature'>
-            <div>Temperature {(temp - 273.15).toFixed(2) }</div>
+            <div>Temperature {(temp - 273.15).toFixed(2)}&#8451;</div>
             {/* <div>Max Temp. {(temp_max - 273.15).toFixed(2) }</div>
             <div>Min Temp. {(temp_min - 273.15).toFixed(2) }</div> */}
         </Card>
