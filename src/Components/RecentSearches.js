@@ -1,4 +1,4 @@
-import { Card, Table } from "antd"
+import { Table } from "antd"
 import { useMemo } from "react"
 import { useSelector } from "react-redux"
 

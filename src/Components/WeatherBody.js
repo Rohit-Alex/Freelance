@@ -5,7 +5,7 @@ import sunriseImage from 'Assests/sunrise.jpg'
 
 const WeatherBody = () => {
     const { weatherDetails } = useSelector(state => state.weather)
-    const { main: { temp, humidity } = {}, weather: [{ description, icon }] = [{}], sys: { sunrise, sunset, country } = {}, name, wind: {speed, deg} = {}, visibility } = weatherDetails
+    const { main: { temp, humidity } = {}, weather: [{ description, icon }] = [{}], sys: { sunrise, sunset, country } = {}, name, wind: {speed} = {}, visibility } = weatherDetails
     
     function formatAMPM(date) {
         let hours = date.getHours();
